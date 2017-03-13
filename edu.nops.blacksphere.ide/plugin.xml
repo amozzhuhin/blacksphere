@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+	<!-- Продукт -->
+
+	<extension id="BlackSphere"
+			point="org.eclipse.core.runtime.products">
+		<product name="IDE BlackSphere" application="org.eclipse.ui.ide.workbench"
+				description="IDE BlackSphere">
+			<property name="appName" value="BlackSphere"/>
+   	        <property name="windowImages" value="res/images/blacksphere16.gif,res/images/blacksphere32.gif,res/images/blacksphere48.gif,res/images/blacksphere64.gif,res/images/blacksphere128.gif"/>
+            <property name="aboutImage" value="res/images/about.gif"/>
+            <property name="startupProgressRect" value="0,280,455,15"/>
+            <property name="startupForegroundColor" value="FFFFFF"/>
+            <property name="startupMessageRect" value="0,280,455,0"/>
+            <property
+                  name="aboutText"
+                  value="Интегрированая среда BlackSphere 1.0.0&#x0A;Разработчик: Мозжухин Андрей&#x0A;&#x0A;Этот продукт использует программные продукты следующих компаний:&#x0A;Apache Software Foundation http://www.apache.org/&#x0A;XStream Team http://xstream.codehaus.org/&#x0A;MXP1 Project http://www.extreme.indiana.edu/xgws/xsoap/xpp/mxp1/index.html"/>
+	    </product>
+	</extension>
+ 
+    <!-- Редакторы -->
+   
+   <extension
+         point="org.eclipse.ui.editors">
+
+
+      <!-- Редактор ассемблерных файлов -->
+
+      <editor
+            name="Assembler editor"
+            extensions="asm,inc,mac"
+            icon="res/images/mime/asm.gif"
+            contributorClass=
+            	"org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            class="edu.nops.blacksphere.ide.editors.asm.ASMEditor"
+            id="edu.nops.blacksphere.editors.asm.ASMEditor">
+      </editor>
+
+      <!-- Редактор файлов устройств -->
+
+      <editor
+            name="BlackSphere Device Editor"
+            extensions="bsx"
+            icon="res/images/mime/device.gif"
+            class="edu.nops.blacksphere.ide.editors.device.DeviceEditor"
+            contributorClass=
+            	"edu.nops.blacksphere.ide.editors.device.DeviceActionBarContributor"
+            id="edu.nops.blacksphere.editors.device.DeviceEditor">
+      </editor>
+
+   </extension>
+
+   <!-- Перспектива "Проектирование устройства" -->
+   
+   <extension point="org.eclipse.ui.perspectives">
+      <perspective
+         name="Проектирование устройства"
+         class="edu.nops.blacksphere.ide.perspectives.DesignPerspective"
+         id="edu.nops.blacksphere.perspective.DesignPerspective"
+         icon="res/images/mime/device.gif">
+      </perspective>
+   </extension>
+ 
+   <!-- Мастера -->
+
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="BlackSphere"
+            id="edu.nops.blacksphere">
+      </category>
+
+      <!-- Мастер нового проекта -->
+
+      <wizard
+            name="Проект BlackSphere"
+            icon="res/images/blacksphere16.gif"
+            category="edu.nops.blacksphere"
+            class="edu.nops.blacksphere.ide.wizards.NewProjectWizard"
+            id="edu.nops.blacksphere.wizards.NewProject"
+            project="true"
+            finalPerspective="edu.nops.blacksphere.perspective.DesignPerspective">
+		  <description>Мастер создания нового проекта BlackSphere</description>
+      </wizard>
+
+      <!-- Мастер нового включаемого файла -->
+
+      <wizard
+            name="Включаемый файл"
+            icon="res/images/mime/asm.gif"
+            category="edu.nops.blacksphere"
+            class="edu.nops.blacksphere.ide.wizards.NewInclideWizard"
+            id="edu.nops.blacksphere.wizards.NewInclideFile"
+            project="false">
+
+          <description>Мастер создания включаемого файла</description>
+      </wizard>
+ 
+   </extension>
+
+  <!-- Построитель проекта -->
+   
+   <extension
+         id="edu.nops.blacksphere.builder.ProjectBuilder"
+         name="BlackSphere Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder hasNature="true">
+         <run class="edu.nops.blacksphere.ide.builder.ProjectBuilder"/>
+      </builder>
+   </extension>
+   
+   <!-- Клаcсификатор проекта -->
+   
+   <extension
+         id="edu.nops.blacksphere.builder.ProjectNature"
+         name="BlackSphere Project Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run class="edu.nops.blacksphere.ide.builder.ProjectNature"/>
+      </runtime>
+      <builder id="edu.nops.blacksphere.builder.ProjectBuilder"/>
+   </extension>
+
+   <!-- Маркер проблем -->
+
+   <extension
+         id="edu.nops.blacksphere.problemmarker"
+         name="Проблема BlackSphere"
+         point="org.eclipse.core.resources.markers">
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <persistent value="true"/>
+   </extension>
+   
+   <!-- Конфигурация запуска и отладки -->
+   
+   <extension point = "org.eclipse.debug.core.launchConfigurationTypes">
+     <launchConfigurationType
+       id="edu.nops.blacksphere.launch.DeviceTesting"
+       name="Тестирование устройства"
+       delegate="edu.nops.blacksphere.ide.launch.DeviceTestingConfiguration"
+       modes="run, debug"/>
+   </extension>
+
+   <!-- Картинка для конфигурации тестирования устройства -->
+ 
+   <extension
+	    point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+     <launchConfigurationTypeImage
+       icon="res/images/blacksphere16.gif"
+       configTypeID="edu.nops.blacksphere.launch.DeviceTesting"
+       id="edu.nops.blacksphere.launch.images.DeviceTesting"/>
+   </extension>
+
+   <!-- Группа вкладок конфигурации тестирования устройства -->
+   
+   <extension
+       point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+     <launchConfigurationTabGroup
+         type="edu.nops.blacksphere.launch.DeviceTesting"
+         class="edu.nops.blacksphere.ide.launch.DeviceTestingTabGroup"
+         id="edu.nops.blacksphere.launch.launchConfigurationTabGroup.DeviceTesting">
+       <launchMode
+           mode="debug"
+           perspective="org.eclipse.debug.ui.DebugPerspective"
+           description="Запустить отладку устройства">
+       </launchMode>
+       <launchMode
+           mode="run"
+           description="Запустить тестирование устройства">
+       </launchMode>
+     </launchConfigurationTabGroup>
+   </extension>
+
+ 
+</plugin>

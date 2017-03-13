@@ -1,0 +1,6 @@
+<device>
+  <descr>Описание устройства</descr>
+  <rom>4096</rom>
+  <ram>4096</ram>
+  <elements/>
+</device>

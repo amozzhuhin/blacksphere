@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+
+   <extension
+         id="BlackSphereEmulator"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="edu.nops.blacksphere.emu.EmulatorApplication">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Перспектива тестирования устройства"
+            class="edu.nops.blacksphere.emu.TestDevicePerspective"
+            id="edu.nops.blacksphere.emu.TestDevicePerspective">
+      </perspective>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="edu.nops.blacksphere.emu"
+            name="Устройство"/>
+      <view
+            id="edu.nops.blacksphere.emu.FaceView"
+            name="Лицевая панель"
+            icon="res/images/blacksphere16.gif"
+            class="edu.nops.blacksphere.emu.ui.FaceView"
+            category="edu.nops.blacksphere.emu"
+            allowMultiple="false"/>
+   </extension> 
+
+
+</plugin>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sets>
+  <instruction command="aaa" description="ascii adjust after addition" />
+  <instruction command="aad" description="ascii adjust ax before division" />
+  <instruction command="aam" description="ascii adjust alter multiply" />
+  <instruction command="aas" description="ascii adjust after subtract" />
+  <instruction command="adc" description="add with carry" />
+  <instruction command="add" description="add" />
+  <instruction command="addps" description="packed single-fp add" />
+  <instruction command="addss" description="scalar single-fp add" />
+  <instruction command="and" description="and" />
+  <instruction command="andnps" description="bit-wise logical and not for single-fp" />
+  <instruction command="andps" description="bit-wise logical and for single-fp" />
+  <instruction command="arpl" description="adjust rpl field of segment selector" />
+  <instruction command="bound" description="check array index against bounds" />
+  <instruction command="bsf" description="bit scan forward" />
+  <instruction command="bsr" description="bit scan reverse" />
+  <instruction command="bswap" description="byte swap" />
+  <instruction command="bt" description="bit test" />
+  <instruction command="btc" description="bit test and complement" />
+  <instruction command="btr" description="bit test and reset" />
+  <instruction command="bts" description="bit test and set" />
+  <instruction command="call" description="call" />
+  <instruction command="cbw" description="convert byte to word" />
+  <instruction command="cdq" description="convert double to quad" />
+  <instruction command="clc" description="clear carry flag" />
+  <instruction command="cld" description="clear direction flag" />
+  <instruction command="cli" description="clear interrupt flag" />
+  <instruction command="clts" description="clear task-switched flag in cr0" />
+  <instruction command="cmc" description="complement carry flag" />
+  <instruction command="cmov" description="conditional move" />
+  <instruction command="cmovcc" description="conditional move" />
+  <instruction command="cmp" description="compare" />
+  <instruction command="cmpps" description="packed single-fp compare" />
+  <instruction command="cmps" description="compare string" />
+  <instruction command="cmpsb" description="compare string bytewise" />
+  <instruction command="cmpsd" description="compare string operands" />
+  <instruction command="cmpss" description="scalar single-fp compare" />
+  <instruction command="cmpsw" description="compare string operands" />
+  <instruction command="cmpxchg" description="compare and exchange" />
+  <instruction command="cmpxchg8b" description="compare and exchange 8 bytes" />
+  <instruction command="comiss" description="scalar ordered single-fp compare and set eflags" />
+  <instruction command="cpuid" description="cpu identification" />
+  <instruction command="cvtpi2ps" description="packed signed int32 to packed single-fp conversion" />
+  <instruction command="cvtps2pi" description="packed single-fp to packed int32 conversion" />
+  <instruction command="cvtsi2ss" description="scalar signed int32 to single-fp conversion" />
+  <instruction command="cvtss2si" description="scalar single-fp to signed int32 conversion" />
+  <instruction command="cvttps2pi" description="packed single-fp to packed int32 conversion (truncate)" />
+  <instruction command="cvttss2si" description="scalar single-fp to signed int32 conversion (truncate)" />
+  <instruction command="cwd" description="convert word to double word" />
+  <instruction command="cwde" description="convert byte to word/convert word to doubleword" />
+  <instruction command="daa" description="decimal adjust after addition" />
+  <instruction command="das" description="decimal adjust after subtract" />
+  <instruction command="dec" description="decrement" />
+  <instruction command="div" description="divide (unsigned)" />
+  <instruction command="divps" description="packed single-fp divide" />
+  <instruction command="divss" description="scalar single-fp divide" />
+  <instruction command="emms" description="empty mmx state" />
+  <instruction command="enter" description="make stack frame for procedure parameters" />
+  <instruction command="esc" description="escape (to external device)" />
+  <instruction command="f2xm1" description="compute 2x&#x2013;1" />
+  <instruction command="fabs" description="absolute value" />
+  <instruction command="fadd" description="add" />
+  <instruction command="faddp" description="add" />
+  <instruction command="fbld" description="load binary coded decimal" />
+  <instruction command="fbstp" description="store bcd integer and pop" />
+  <instruction command="fchs" description="change sign" />
+  <instruction command="fclex" description="clear exceptions" />
+  <instruction command="fcmov" description="floating-point conditional move" />
+  <instruction command="fcom" description="compare real" />
+  <instruction command="fcomi" description="compare real and set eflags" />
+  <instruction command="fcomip" description="compare real and set eflags" />
+  <instruction command="fcomp" description="compare real" />
+  <instruction command="fcompp" description="compare real" />
+  <instruction command="fcos" description="cosine" />
+  <instruction command="fdecstp" description="decrement stack-top pointer" />
+  <instruction command="fdiv" description="divide" />
+  <instruction command="fdivp" description="divide" />
+  <instruction command="fdivr" description="reverse divide" />
+  <instruction command="fdivrp" description="reverse divide" />
+  <instruction command="ffree" description="free floating-point register" />
+  <instruction command="fiadd" description="add" />
+  <instruction command="ficom" description="compare integer" />
+  <instruction command="ficomp" description="compare integer" />
+  <instruction command="fidiv" description="divide" />
+  <instruction command="fidivr" description="reverse divide" />
+  <instruction command="fild" description="load integer" />
+  <instruction command="fimul" description="multiply" />
+  <instruction command="fincstp" description="increment stack-top pointer" />
+  <instruction command="finit" description="initialize floating-point unit" />
+  <instruction command="fist" description="store integer" />
+  <instruction command="fistp" description="store integer" />
+  <instruction command="fisub" description="subtract" />
+  <instruction command="fisubr" description="reverse subtract" />
+  <instruction command="fld" description="load real" />
+  <instruction command="fld1" description="load constant" />
+  <instruction command="fldcw" description="load control word" />
+  <instruction command="fldenv" description="load fpuenvironment" />
+  <instruction command="fldl2e" description="load constant" />
+  <instruction command="fldl2t" description="load constant" />
+  <instruction command="fldlg2" description="load constant" />
+  <instruction command="fldln2" description="load constant" />
+  <instruction command="fldpi" description="load constant" />
+  <instruction command="fldz" description="load constant" />
+  <instruction command="fmul" description="multiply" />
+  <instruction command="fmulp" description="multiply" />
+  <instruction command="fnclex" description="clear exceptions" />
+  <instruction command="fninit" description="initialize floating-point unit" />
+  <instruction command="fnop" description="no operation" />
+  <instruction command="fnsave" description="store fpustate" />
+  <instruction command="fnstcw" description="store control word" />
+  <instruction command="fnstenv" description="store fpu environment" />
+  <instruction command="fnstsw" description="store status word" />
+  <instruction command="fpatan" description="partial arctangent" />
+  <instruction command="fprem" description="partial remainder" />
+  <instruction command="fprem1" description="partial remainder" />
+  <instruction command="fptan" description="partial tangent" />
+  <instruction command="frndint" description="round to integer" />
+  <instruction command="frstor" description="restore fpu state" />
+  <instruction command="fsave" description="store fpustate" />
+  <instruction command="fscale" description="scale" />
+  <instruction command="fsin" description="sine" />
+  <instruction command="fsincos" description="sine and cosine" />
+  <instruction command="fsqrt" description="square root" />
+  <instruction command="fst" description="store real" />
+  <instruction command="fstcw" description="store control word" />
+  <instruction command="fstenv" description="store fpu environment" />
+  <instruction command="fstp" description="store real" />
+  <instruction command="fstsw" description="store status word" />
+  <instruction command="fsub" description="subtract" />
+  <instruction command="fsubp" description="subtract" />
+  <instruction command="fsubr" description="reverse subtract" />
+  <instruction command="fsubrp" description="reverse subtract" />
+  <instruction command="ftst" description="test" />
+  <instruction command="fucom" description="unordered compare real" />
+  <instruction command="fucomi" description="compare real and set eflags" />
+  <instruction command="fucomip" description="compare real and set eflags" />
+  <instruction command="fucomp" description="unordered compare real" />
+  <instruction command="fucompp" description="unordered compare real" />
+  <instruction command="fwait" description="wait" />
+  <instruction command="fxam" description="examine" />
+  <instruction command="fxch" description="exchange register contents" />
+  <instruction command="fxrstor" description="restore fp and mmx state and streaming simd extension state" />
+  <instruction command="fxsave" description="store fp and mmx state and streaming simd extension state" />
+  <instruction command="fxtract" description="extract exponent and significand" />
+  <instruction command="fyl2x" description="compute y * log2x" />
+  <instruction command="fyl2xp1" description="compute y * log2(x +1)" />
+  <instruction command="hlt" description="halt" />
+  <instruction command="idiv" description="integer divide (signed)" />
+  <instruction command="imul" description="integer multiply (signed)" />
+  <instruction command="in" description="input from" />
+  <instruction command="inc" description="increment" />
+  <instruction command="ins" description="input from port to string" />
+  <instruction command="insb" description="input from port to string" />
+  <instruction command="insd" description="input from port to string" />
+  <instruction command="insw" description="input from port to string" />
+  <instruction command="int" description="call to interrupt procedure" />
+  <instruction command="into" description="call to interrupt procedure" />
+  <instruction command="invd" description="invalidate internal caches" />
+  <instruction command="invlpg" description="invalidate tlb entry" />
+  <instruction command="iret" description="interrupt return" />
+  <instruction command="iretd" description="interrupt return" />
+  <instruction command="j" description="jump if condition is met" />
+  <instruction command="ja" description="jump if above" />
+  <instruction command="jae" description="jump if above or equal" />
+  <instruction command="jb" description="jump if below" />
+  <instruction command="jbe" description="jump if below or equal" />
+  <instruction command="jcc" description="jump if condition is met" />
+  <instruction command="jcxz" description="jump if cx equal zero" />
+  <instruction command="je" description="jump if equal" />
+  <instruction command="jg" description="jump if greater" />
+  <instruction command="jge" description="jump if greater or equal" />
+  <instruction command="jl" description="jump if less" />
+  <instruction command="jle" description="jump if less or equal" />
+  <instruction command="jmp" description="jump" />
+  <instruction command="jna" description="jump if not above" />
+  <instruction command="jnae" description="jump if not above and not equal" />
+  <instruction command="jnb" description="jump if not below" />
+  <instruction command="jnbe" description="jump if not below and not equal" />
+  <instruction command="jne" description="jump if not equal" />
+  <instruction command="jng" description="jump if not greater" />
+  <instruction command="jnge" description="jump if not greater and not equal" />
+  <instruction command="jnl" description="jump if not less" />
+  <instruction command="jnle" description="jump if not less and not equal" />
+  <instruction command="jno" description="jump if no overflow" />
+  <instruction command="jnp" description="jump if no parity" />
+  <instruction command="jns" description="jump if no sign" />
+  <instruction command="jnz" description="jump if not zero" />
+  <instruction command="jo" description="jump if overflow" />
+  <instruction command="jp" description="jump if parity" />
+  <instruction command="jpe" description="jump if parity even" />
+  <instruction command="jpo" description="jump if parity odd" />
+  <instruction command="js" description="jump if sign" />
+  <instruction command="jz" description="jump if zero" />
+  <instruction command="lahf" description="load ah with flags" />
+  <instruction command="lar" description="load access rights byte" />
+  <instruction command="ldmxcsr" description="load streaming simd extension control/status" />
+  <instruction command="lds" description="load far pointer" />
+  <instruction command="lea" description="load effective address" />
+  <instruction command="leave" description="high level procedure exit" />
+  <instruction command="les" description="load far pointer" />
+  <instruction command="lfs" description="load far pointer" />
+  <instruction command="lgdt" description="load global/interrupt descriptor table register" />
+  <instruction command="lgs" description="load far pointer" />
+  <instruction command="lidt" description="load global/interrupt descriptor table register" />
+  <instruction command="lldt" description="load local descriptor table register" />
+  <instruction command="lmsw" description="load machine status word" />
+  <instruction command="lock" description="assert lock# signal prefix" />
+  <instruction command="lods" description="load string" />
+  <instruction command="lodsb" description="load string" />
+  <instruction command="lodsd" description="load string" />
+  <instruction command="lodsw" description="load string" />
+  <instruction command="loop" description="loop according to ecx counter" />
+  <instruction command="loopcc" description="loop according to ecx counter" />
+  <instruction command="loope" description="loop cx times while equal" />
+  <instruction command="loopne" description="loop cx times while not equal" />
+  <instruction command="loopnz" description="loop cx times while not zero" />
+  <instruction command="loopz" description="loop cx times while zero" />
+  <instruction command="lsl" description="load segment limit" />
+  <instruction command="lss" description="load far pointer" />
+  <instruction command="ltr" description="load task register" />
+  <instruction command="maskmovq" description="byte mask write" />
+  <instruction command="maxps" description="packed single-fp maximum" />
+  <instruction command="maxss" description="scalar single-fp maximum" />
+  <instruction command="minps" description="packed single-fp minimum" />
+  <instruction command="minss" description="scalar single-fp minimum" />
+  <instruction command="mov" description="move" />
+  <instruction command="movaps" description="move aligned four packed single-fp" />
+  <instruction command="movd" description="move 32 bits" />
+  <instruction command="movhlps" description="high to low packed single-fp" />
+  <instruction command="movhps" description="move high packed single-fp" />
+  <instruction command="movlhps" description="move low to high packed single-fp" />
+  <instruction command="movlps" description="move low packed single-fp" />
+  <instruction command="movmskps" description="move maskto integer" />
+  <instruction command="movntps" description="move aligned four packed single-fp non temporal" />
+  <instruction command="movntq" description="move 64 bits non temporal" />
+  <instruction command="movq" description="move 64 bits" />
+  <instruction command="movs" description="move data from string to string" />
+  <instruction command="movsb" description="move data from string to string" />
+  <instruction command="movsd" description="move data from string to string" />
+  <instruction command="movss" description="move scalar single-fp" />
+  <instruction command="movsw" description="move data from string to string" />
+  <instruction command="movsx" description="move with sign-extension" />
+  <instruction command="movups" description="move unaligned four packed single-fp" />
+  <instruction command="movzx" description="move with zero-extend" />
+  <instruction command="mul" description="muliply (unsigned)" />
+  <instruction command="mulps" description="packed single-fp multiply" />
+  <instruction command="mulss" description="scalar single-fp multiply" />
+  <instruction command="neg" description="negate" />
+  <instruction command="nop" description="no operation" />
+  <instruction command="not" description="invert" />
+  <instruction command="or" description="logical inclusiveor" />
+  <instruction command="orps" description="bit-wise logical or for single-fp data" />
+  <instruction command="out" description="output to" />
+  <instruction command="outs" description="output string to port" />
+  <instruction command="outsb" description="output string to port" />
+  <instruction command="outsd" description="output string to port" />
+  <instruction command="outsw" description="output string to port" />
+  <instruction command="packssdw" description="pack with signed saturation" />
+  <instruction command="packsswb" description="pack with signed saturation" />
+  <instruction command="packuswb" description="pack with unsigned saturation" />
+  <instruction command="paddb" description="packed add" />
+  <instruction command="paddd" description="packed add" />
+  <instruction command="paddsb" description="packed add with saturation" />
+  <instruction command="paddsw" description="packed add with saturation" />
+  <instruction command="paddusb" description="packed add unsigned with saturation" />
+  <instruction command="paddusw" description="packed add unsigned with saturation" />
+  <instruction command="paddw" description="packed add" />
+  <instruction command="pand" description="logical and" />
+  <instruction command="pandn" description="logical and not" />
+  <instruction command="pavgb" description="packed average" />
+  <instruction command="pavgw" description="packed average" />
+  <instruction command="pcmpeqb" description="packed compare for equal" />
+  <instruction command="pcmpeqd" description="packed compare for equal" />
+  <instruction command="pcmpeqw" description="packed compare for equal" />
+  <instruction command="pcmpgtb" description="packed compare for greater than" />
+  <instruction command="pcmpgtd" description="packed compare for greater than" />
+  <instruction command="pcmpgtw" description="packed compare for greater than" />
+  <instruction command="pextrw" description="extract word" />
+  <instruction command="pinsrw" description="insert word" />
+  <instruction command="pmaddwd" description="packed multiply and add" />
+  <instruction command="pmaxsw" description="packed signed integer word maximum" />
+  <instruction command="pmaxub" description="packed unsigned integer byte maximum" />
+  <instruction command="pminsw" description="packed signed integer word minimum" />
+  <instruction command="pminub" description="packed unsigned integer byte minimum" />
+  <instruction command="pmovmskb" description="movebyte mask to integer" />
+  <instruction command="pmulhuw" description="packed multiply high unsigned" />
+  <instruction command="pmulhw" description="packed multiply high" />
+  <instruction command="pmullw" description="packed multiply low" />
+  <instruction command="pop" description="pop" />
+  <instruction command="popa" description="pop all general-purpose registers" />
+  <instruction command="popad" description="pop all general-purpose registers" />
+  <instruction command="popf" description="pop flags" />
+  <instruction command="popfd" description="pop stack into eflags register" />
+  <instruction command="por" description="bitwise logical or" />
+  <instruction command="prefetch" description="prefetch" />
+  <instruction command="psadbw" description="packed sum of absolute differences" />
+  <instruction command="pshufw" description="packed shuffle word" />
+  <instruction command="pslld" description="packed shift left logical" />
+  <instruction command="psllq" description="packed shift left logical" />
+  <instruction command="psllw" description="packed shift left logical" />
+  <instruction command="psrad" description="packed shift right arithmetic" />
+  <instruction command="psraw" description="packed shift right arithmetic" />
+  <instruction command="psrld" description="packed shift right logical" />
+  <instruction command="psrlq" description="packed shift right logical" />
+  <instruction command="psrlw" description="packed shift right logical" />
+  <instruction command="psubb" description="packed subtract" />
+  <instruction command="psubd" description="packed subtract" />
+  <instruction command="psubsb" description="packed subtract with saturation" />
+  <instruction command="psubsw" description="packed subtract with saturation" />
+  <instruction command="psubusb" description="packed subtract unsigned with saturation" />
+  <instruction command="psubusw" description="packed subtract unsigned with saturation" />
+  <instruction command="psubw" description="packed subtract" />
+  <instruction command="punpckhbw" description="unpack high packed data" />
+  <instruction command="punpckhdq" description="unpack high packed data" />
+  <instruction command="punpckhwd" description="unpack high packed data" />
+  <instruction command="punpcklbw" description="unpack low packed data" />
+  <instruction command="punpckldq" description="unpack low packed data" />
+  <instruction command="punpcklwd" description="unpack low packed data" />
+  <instruction command="push" description="push" />
+  <instruction command="pusha" description="push all general-purpose registers" />
+  <instruction command="pushad" description="push all general-purpose registers" />
+  <instruction command="pushf" description="push eflags register onto the stack" />
+  <instruction command="pushfd" description="push eflags register onto the stack" />
+  <instruction command="pxor" description="logical exclusive or" />
+  <instruction command="rcl" description="rotate" />
+  <instruction command="rcpps" description="packed single-fp reciprocal" />
+  <instruction command="rcpss" description="scalar single-fp reciprocal" />
+  <instruction command="rcr" description="rotate" />
+  <instruction command="rdmsr" description="read from model specific register" />
+  <instruction command="rdpmc" description="read performance-monitoring counters" />
+  <instruction command="rdtsc" description="read time-stamp counter" />
+  <instruction command="rep" description="repeat cx times" />
+  <instruction command="repe" description="repeat cx times while equal" />
+  <instruction command="repne" description="repeat cx times while not equal" />
+  <instruction command="repnz" description="repeat cx times while not zero" />
+  <instruction command="repz" description="repeat cx times while zero" />
+  <instruction command="ret" description="return from procedure" />
+  <instruction command="rol" description="rotate" />
+  <instruction command="ror" description="rotate" />
+  <instruction command="rsm" description="resume from system management mode" />
+  <instruction command="rsqrtps" description="packed single-fp square root reciprocal" />
+  <instruction command="rsqrtss" description="scalar single-fp square root reciprocal" />
+  <instruction command="sahf" description="store ah into flags" />
+  <instruction command="sal" description="shift arithmetic left" />
+  <instruction command="sar" description="shift arithmetic right" />
+  <instruction command="sbb" description="integer subtraction with borrow" />
+  <instruction command="scas" description="scan string" />
+  <instruction command="scasb" description="scan string" />
+  <instruction command="scasd" description="scan string" />
+  <instruction command="scasw" description="scan string" />
+  <instruction command="set" description="set byte on condition" />
+  <instruction command="setcc" description="set byte on condition" />
+  <instruction command="sfence" description="store fence" />
+  <instruction command="sgdt" description="store global/interrupt descriptor table register" />
+  <instruction command="shl" description="shift left" />
+  <instruction command="shld" description="double precision shift left" />
+  <instruction command="shr" description="shift logical right" />
+  <instruction command="shrd" description="double precision shift right" />
+  <instruction command="shufps" description="shuffle single-fp" />
+  <instruction command="sidt" description="store global/interrupt descriptor table register" />
+  <instruction command="sldt" description="store local descriptor table register" />
+  <instruction command="smsw" description="store machine status word" />
+  <instruction command="sqrtps" description="packed single-fp square root" />
+  <instruction command="sqrtss" description="scalar single-fp square root" />
+  <instruction command="stc" description="set carry flag" />
+  <instruction command="std" description="set direction flag" />
+  <instruction command="sti" description="set interrupt flag" />
+  <instruction command="stmxcsr" description="store streaming simd extension control/status" />
+  <instruction command="stos" description="store string" />
+  <instruction command="stosb" description="store string" />
+  <instruction command="stosd" description="store string" />
+  <instruction command="stosw" description="store string" />
+  <instruction command="str" description="store task register" />
+  <instruction command="sub" description="subtract" />
+  <instruction command="subps" description="packed single-fp subtract" />
+  <instruction command="subss" description="scalar single-fp subtract" />
+  <instruction command="sysenter" description="fast transition to system call entry point" />
+  <instruction command="sysexit" description="fast transition from system call entry point" />
+  <instruction command="test" description="logical compare" />
+  <instruction command="ucomiss" description="unordered scalar single-fp compare and set eflags" />
+  <instruction command="ud2" description="undefined instruction" />
+  <instruction command="unpckhps" description="unpack high packed single-fp data" />
+  <instruction command="unpcklps" description="unpack low packed single-fp data" />
+  <instruction command="verr" description="verify a segment for reading" />
+  <instruction command="verw" description="verify a segment for writing" />
+  <instruction command="wait" description="wait" />
+  <instruction command="wbinvd" description="write back and invalidate cache" />
+  <instruction command="wrmsr" description="write to model specific register" />
+  <instruction command="xadd" description="exchange and add" />
+  <instruction command="xchg" description="exchange" />
+  <instruction command="xlat" description="table look-up translation" />
+  <instruction command="xlatb" description="table look-up translation" />
+  <instruction command="xor" description="exclusive or" />
+  <instruction command="xorps" description="bit-wise logical xor for single-fp data" />
+</sets>

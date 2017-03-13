@@ -1,0 +1,165 @@
+<device>
+  <author>BlackSphere</author>
+  <descr>Пример устройства управления диодами по кнопке</descr>
+  <rom>4096</rom>
+  <ram>4096</ram>
+  <frequency>500</frequency>
+  <elements>
+    <edu.nops.blacksphere.core.device.elements.InPortElement name="DD1">
+      <mark>К1810ИР82</mark>
+      <schemeLocation>
+        <x>119</x>
+        <y>85</y>
+      </schemeLocation>
+      <inputWires>
+        <edu.nops.blacksphere.core.device.elements.WireElement>
+          <source class="edu.nops.blacksphere.core.device.elements.ButtonElement" name="S1">
+            <mark>КП2-8</mark>
+            <schemeLocation>
+              <x>51</x>
+              <y>102</y>
+            </schemeLocation>
+            <faceLocation>
+              <x>68</x>
+              <y>90</y>
+            </faceLocation>
+            <inputWires>
+              <edu.nops.blacksphere.core.device.elements.WireElement>
+                <source class="edu.nops.blacksphere.core.device.elements.PowerElement" name="Ucc1">
+                  <schemeLocation>
+                    <x>17</x>
+                    <y>85</y>
+                  </schemeLocation>
+                  <inputWires/>
+                  <outputWires>
+                    <edu.nops.blacksphere.core.device.elements.WireElement reference="../../.."/>
+                  </outputWires>
+                </source>
+                <sourcePin>1</sourcePin>
+                <target class="edu.nops.blacksphere.core.device.elements.ButtonElement" reference="../../.."/>
+                <targetPin>1</targetPin>
+              </edu.nops.blacksphere.core.device.elements.WireElement>
+            </inputWires>
+            <outputWires>
+              <edu.nops.blacksphere.core.device.elements.WireElement reference="../../.."/>
+            </outputWires>
+            <label>Вкл</label>
+            <checked>false</checked>
+          </source>
+          <sourcePin>2</sourcePin>
+          <target class="edu.nops.blacksphere.core.device.elements.InPortElement" reference="../../.."/>
+          <targetPin>1</targetPin>
+        </edu.nops.blacksphere.core.device.elements.WireElement>
+      </inputWires>
+      <outputWires/>
+      <address>0</address>
+      <inputData>0</inputData>
+    </edu.nops.blacksphere.core.device.elements.InPortElement>
+    <edu.nops.blacksphere.core.device.elements.ButtonElement reference="../edu.nops.blacksphere.core.device.elements.InPortElement/inputWires/edu.nops.blacksphere.core.device.elements.WireElement/source"/>
+    <edu.nops.blacksphere.core.device.elements.LabelElement name="LABEL1">
+      <schemeLocation>
+        <x>187</x>
+        <y>34</y>
+      </schemeLocation>
+      <text>Управление диодами по кнопке</text>
+    </edu.nops.blacksphere.core.device.elements.LabelElement>
+    <edu.nops.blacksphere.core.device.elements.PowerElement reference="../edu.nops.blacksphere.core.device.elements.InPortElement/inputWires/edu.nops.blacksphere.core.device.elements.WireElement/source/inputWires/edu.nops.blacksphere.core.device.elements.WireElement/source"/>
+    <edu.nops.blacksphere.core.device.elements.OutPortElement name="DD2">
+      <mark>К1810ИР82</mark>
+      <schemeLocation>
+        <x>255</x>
+        <y>85</y>
+      </schemeLocation>
+      <inputWires/>
+      <outputWires>
+        <edu.nops.blacksphere.core.device.elements.WireElement>
+          <source class="edu.nops.blacksphere.core.device.elements.OutPortElement" reference="../../.."/>
+          <sourcePin>19</sourcePin>
+          <target class="edu.nops.blacksphere.core.device.elements.LedElement" name="VD1">
+            <mark>КЛ101А</mark>
+            <schemeLocation>
+              <x>493</x>
+              <y>102</y>
+            </schemeLocation>
+            <faceLocation>
+              <x>123</x>
+              <y>90</y>
+            </faceLocation>
+            <inputWires>
+              <edu.nops.blacksphere.core.device.elements.WireElement reference="../../.."/>
+              <edu.nops.blacksphere.core.device.elements.WireElement>
+                <source class="edu.nops.blacksphere.core.device.elements.GroundElement" name="GND1">
+                  <schemeLocation>
+                    <x>542</x>
+                    <y>219</y>
+                  </schemeLocation>
+                  <inputWires/>
+                  <outputWires>
+                    <edu.nops.blacksphere.core.device.elements.WireElement reference="../../.."/>
+                    <edu.nops.blacksphere.core.device.elements.WireElement>
+                      <source class="edu.nops.blacksphere.core.device.elements.GroundElement" reference="../../.."/>
+                      <sourcePin>1</sourcePin>
+                      <target class="edu.nops.blacksphere.core.device.elements.LedElement" name="VD2">
+                        <mark>КЛ101А</mark>
+                        <schemeLocation>
+                          <x>493</x>
+                          <y>153</y>
+                        </schemeLocation>
+                        <faceLocation>
+                          <x>167</x>
+                          <y>90</y>
+                        </faceLocation>
+                        <inputWires>
+                          <edu.nops.blacksphere.core.device.elements.WireElement>
+                            <source class="edu.nops.blacksphere.core.device.elements.NotElement" name="DD3">
+                              <mark>К155ЛН1</mark>
+                              <schemeLocation>
+                                <x>425</x>
+                                <y>153</y>
+                              </schemeLocation>
+                              <inputWires>
+                                <edu.nops.blacksphere.core.device.elements.WireElement>
+                                  <source class="edu.nops.blacksphere.core.device.elements.OutPortElement" reference="../../../../../../../../../../../../../../.."/>
+                                  <sourcePin>19</sourcePin>
+                                  <target class="edu.nops.blacksphere.core.device.elements.NotElement" reference="../../.."/>
+                                  <targetPin>1</targetPin>
+                                </edu.nops.blacksphere.core.device.elements.WireElement>
+                              </inputWires>
+                              <outputWires>
+                                <edu.nops.blacksphere.core.device.elements.WireElement reference="../../.."/>
+                              </outputWires>
+                            </source>
+                            <sourcePin>2</sourcePin>
+                            <target class="edu.nops.blacksphere.core.device.elements.LedElement" reference="../../.."/>
+                            <targetPin>1</targetPin>
+                          </edu.nops.blacksphere.core.device.elements.WireElement>
+                          <edu.nops.blacksphere.core.device.elements.WireElement reference="../../.."/>
+                        </inputWires>
+                        <outputWires/>
+                        <fired>false</fired>
+                      </target>
+                      <targetPin>2</targetPin>
+                    </edu.nops.blacksphere.core.device.elements.WireElement>
+                  </outputWires>
+                </source>
+                <sourcePin>1</sourcePin>
+                <target class="edu.nops.blacksphere.core.device.elements.LedElement" reference="../../.."/>
+                <targetPin>2</targetPin>
+              </edu.nops.blacksphere.core.device.elements.WireElement>
+            </inputWires>
+            <outputWires/>
+            <fired>false</fired>
+          </target>
+          <targetPin>1</targetPin>
+        </edu.nops.blacksphere.core.device.elements.WireElement>
+        <edu.nops.blacksphere.core.device.elements.WireElement reference="../edu.nops.blacksphere.core.device.elements.WireElement/target/inputWires/edu.nops.blacksphere.core.device.elements.WireElement[2]/source/outputWires/edu.nops.blacksphere.core.device.elements.WireElement[2]/target/inputWires/edu.nops.blacksphere.core.device.elements.WireElement/source/inputWires/edu.nops.blacksphere.core.device.elements.WireElement"/>
+      </outputWires>
+      <address>0</address>
+      <outputData>0</outputData>
+    </edu.nops.blacksphere.core.device.elements.OutPortElement>
+    <edu.nops.blacksphere.core.device.elements.LedElement reference="../edu.nops.blacksphere.core.device.elements.OutPortElement/outputWires/edu.nops.blacksphere.core.device.elements.WireElement/target"/>
+    <edu.nops.blacksphere.core.device.elements.NotElement reference="../edu.nops.blacksphere.core.device.elements.OutPortElement/outputWires/edu.nops.blacksphere.core.device.elements.WireElement/target/inputWires/edu.nops.blacksphere.core.device.elements.WireElement[2]/source/outputWires/edu.nops.blacksphere.core.device.elements.WireElement[2]/target/inputWires/edu.nops.blacksphere.core.device.elements.WireElement/source"/>
+    <edu.nops.blacksphere.core.device.elements.LedElement reference="../edu.nops.blacksphere.core.device.elements.OutPortElement/outputWires/edu.nops.blacksphere.core.device.elements.WireElement/target/inputWires/edu.nops.blacksphere.core.device.elements.WireElement[2]/source/outputWires/edu.nops.blacksphere.core.device.elements.WireElement[2]/target"/>
+    <edu.nops.blacksphere.core.device.elements.GroundElement reference="../edu.nops.blacksphere.core.device.elements.OutPortElement/outputWires/edu.nops.blacksphere.core.device.elements.WireElement/target/inputWires/edu.nops.blacksphere.core.device.elements.WireElement[2]/source"/>
+  </elements>
+</device>
