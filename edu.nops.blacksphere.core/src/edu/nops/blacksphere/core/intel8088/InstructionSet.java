@@ -11,7 +11,7 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
  */
 public class InstructionSet {
 	
-	public class Instruction {
+	public static class Instruction {
 
 		/** Имя инструкции */
 		@XStreamAsAttribute
