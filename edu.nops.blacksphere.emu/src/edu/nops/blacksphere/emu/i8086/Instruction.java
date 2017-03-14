@@ -1,7 +1,5 @@
 package edu.nops.blacksphere.emu.i8086;
 
-import edu.nops.blacksphere.emu.EmuMessages;
-
 /**
  * Описание инструкции процессора
  * @author nops

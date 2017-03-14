@@ -11,7 +11,6 @@ import org.eclipse.draw2d.GridLayout;
 import edu.nops.blacksphere.core.device.elements.AbstractElement;
 import edu.nops.blacksphere.core.device.elements.KeyboardElement;
 import edu.nops.blacksphere.ide.BSP;
-import edu.nops.blacksphere.ide.BSPMessages;
 import edu.nops.blacksphere.ide.editors.device.figures.ElementFigure;
 
 public class FaceKeyboardFigure extends ElementFigure {

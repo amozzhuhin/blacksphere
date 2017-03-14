@@ -7,7 +7,6 @@ import org.eclipse.ui.IPerspectiveFactory;
 import org.eclipse.ui.console.IConsoleConstants;
 
 import edu.nops.blacksphere.ide.BSP;
-import edu.nops.blacksphere.ide.BSPMessages;
 
 /**
  * Перспектива "Проектирование устройства"

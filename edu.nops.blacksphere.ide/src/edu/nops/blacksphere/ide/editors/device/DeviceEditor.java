@@ -29,8 +29,6 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.part.IPageSite;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 
-import com.sun.imageio.spi.OutputStreamImageOutputStreamSpi;
-
 import edu.nops.blacksphere.core.device.Device;
 import edu.nops.blacksphere.core.device.DeviceTransform;
 import edu.nops.blacksphere.core.resources.IFileStoreEditorInput;

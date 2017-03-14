@@ -1,7 +1,5 @@
 package edu.nops.blacksphere.ide;
 
-import java.util.Hashtable;
-
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;

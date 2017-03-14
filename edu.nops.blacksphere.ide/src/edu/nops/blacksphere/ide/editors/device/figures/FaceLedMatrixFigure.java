@@ -4,8 +4,6 @@ import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Figure;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.geometry.Rectangle;
-import org.eclipse.swt.graphics.Color;
-
 import edu.nops.blacksphere.core.device.elements.LedMatrixElement;
 import edu.nops.blacksphere.ide.BSP;
 

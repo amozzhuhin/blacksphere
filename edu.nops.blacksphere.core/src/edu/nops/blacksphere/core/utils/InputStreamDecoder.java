@@ -6,8 +6,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import edu.nops.blacksphere.core.CoreMessages;
-
 /**
  * Перекодировка потока ввода
  * @author nops

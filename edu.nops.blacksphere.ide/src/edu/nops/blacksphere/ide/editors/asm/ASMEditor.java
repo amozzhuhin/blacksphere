@@ -9,8 +9,6 @@ import org.eclipse.ui.texteditor.ContentAssistAction;
 import org.eclipse.ui.texteditor.ITextEditorActionDefinitionIds;
 import org.eclipse.ui.texteditor.SourceViewerDecorationSupport;
 
-import edu.nops.blacksphere.ide.BSPMessages;
-
 /**
  * Редактор исходного текста на языке ассемблера 
  * @author nops

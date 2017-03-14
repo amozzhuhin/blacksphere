@@ -7,9 +7,6 @@ import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.LineBorder;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.graphics.Font;
-
-
 import edu.nops.blacksphere.core.device.elements.AbstractElement;
 import edu.nops.blacksphere.core.device.elements.LabelElement;
 import edu.nops.blacksphere.ide.BSP;
