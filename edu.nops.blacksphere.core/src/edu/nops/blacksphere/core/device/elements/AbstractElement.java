@@ -219,9 +219,10 @@ public class AbstractElement implements IPropertySource,
 	public Object getPropertyValue(Object propertyId) {
 		if (propertyId.equals(SCHEME_LOCATION_PROP)) 
 			return getSchemeLocation();
-		if (propertyId.equals(FACE_LOCATION_PROP)) 
-			return getFaceLocation();
-		if (propertyId.equals(NAME_PROP))
+		if (propertyId.equals(FACE_LOCATION_PROP)) { 
+			Object result = getFaceLocation();
+			return result != null ? result : "(none)";
+		} if (propertyId.equals(NAME_PROP))
 			return getName();
 		if (propertyId.equals(MARK_PROP))
 			return getMark();
